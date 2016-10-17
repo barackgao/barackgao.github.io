@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Internet," />
 
 
 
@@ -84,15 +84,38 @@
 
 
 
-<meta name="description" content="不乱于心 不困于情 不畏将来 不念过往无愧于天 无愧于地 无怍于人 无惧于鬼">
-<meta property="og:type" content="website">
-<meta property="og:title" content="BarackGao's Blog">
-<meta property="og:url" content="http://www.barackgao.com/index.html">
+<meta name="description" content="配置和启动实例1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；
+
+2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义0.0.0.0/0；
+
+3、然后启动实例，这样就完成了实例的创建和启动。万事开头难，有了实例我们就可以开始做点文章了。
+创建和关联弹性IP1、在左边栏中选择弹性IP，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在AWS上配置VPN">
+<meta property="og:url" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/index.html">
 <meta property="og:site_name" content="BarackGao's Blog">
-<meta property="og:description" content="不乱于心 不困于情 不畏将来 不念过往无愧于天 无愧于地 无怍于人 无惧于鬼">
+<meta property="og:description" content="配置和启动实例1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；
+
+2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义0.0.0.0/0；
+
+3、然后启动实例，这样就完成了实例的创建和启动。万事开头难，有了实例我们就可以开始做点文章了。
+创建和关联弹性IP1、在左边栏中选择弹性IP，">
+<meta property="og:image" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/1.png">
+<meta property="og:image" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/2.png">
+<meta property="og:image" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/3.png">
+<meta property="og:image" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/4.png">
+<meta property="og:image" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/5.png">
+<meta property="og:image" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/6.png">
+<meta property="og:updated_time" content="2016-10-17T09:43:52.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BarackGao's Blog">
-<meta name="twitter:description" content="不乱于心 不困于情 不畏将来 不念过往无愧于天 无愧于地 无怍于人 无惧于鬼">
+<meta name="twitter:title" content="在AWS上配置VPN">
+<meta name="twitter:description" content="配置和启动实例1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；
+
+2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义0.0.0.0/0；
+
+3、然后启动实例，这样就完成了实例的创建和启动。万事开头难，有了实例我们就可以开始做点文章了。
+创建和关联弹性IP1、在左边栏中选择弹性IP，">
+<meta name="twitter:image" content="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/1.png">
 
 
 
@@ -113,10 +136,10 @@
 
 
 
-  <link rel="canonical" href="http://www.barackgao.com/"/>
+  <link rel="canonical" href="http://www.barackgao.com/2016/10/17/在AWS上配置VPN/"/>
 
 
-  <title> BarackGao's Blog </title>
+  <title> 在AWS上配置VPN | BarackGao's Blog </title>
 </head>
 
 <body itemscope itemtype="//schema.org/WebPage" lang="zh-Hans">
@@ -137,9 +160,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
@@ -216,9 +237,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -238,10 +259,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/10/17/在AWS上配置VPN/" itemprop="url">
-                  在AWS上配置VPN
-                </a>
+                在AWS上配置VPN
               
             
           </h1>
@@ -281,9 +299,7 @@
       
 
       
-        
-          
-            <h2 id="配置和启动实例"><a href="#配置和启动实例" class="headerlink" title="配置和启动实例"></a>配置和启动实例</h2><p>1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；</p>
+        <h2 id="配置和启动实例"><a href="#配置和启动实例" class="headerlink" title="配置和启动实例"></a>配置和启动实例</h2><p>1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；</p>
 <img src="/2016/10/17/在AWS上配置VPN/1.png" alt="图1" title="图1">
 <p>2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义<code>0.0.0.0/0</code>；</p>
 <img src="/2016/10/17/在AWS上配置VPN/2.png" alt="图2" title="图2">
@@ -340,138 +356,59 @@ sudo sysctl -p
 
 <p>转载请注明出处。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/17/hello-world/" itemprop="url">
-                  Hello World
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-10-17T16:22:22+08:00" content="2016-10-17">
-              2016-10-17
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/Internet/" rel="tag">#Internet</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/17/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -479,6 +416,10 @@ sudo sysctl -p
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -498,8 +439,17 @@ sudo sysctl -p
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -542,6 +492,17 @@ sudo sysctl -p
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置和启动实例"><span class="nav-number">1.</span> <span class="nav-text">配置和启动实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建和关联弹性IP"><span class="nav-number">2.</span> <span class="nav-text">创建和关联弹性IP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#登陆实例"><span class="nav-number">3.</span> <span class="nav-text">登陆实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置pptpd（这一部分比较麻烦，请仔细看好每一步）"><span class="nav-number">4.</span> <span class="nav-text">配置pptpd（这一部分比较麻烦，请仔细看好每一步）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#使用apt源服务来安装PPTPD服务"><span class="nav-number">4.1.</span> <span class="nav-text">使用apt源服务来安装PPTPD服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装完成之后编辑pptpd-conf配置文件"><span class="nav-number">4.2.</span> <span class="nav-text">安装完成之后编辑pptpd.conf配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑PPP选项配置文件"><span class="nav-number">4.3.</span> <span class="nav-text">编辑PPP选项配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑用户配置文件来添加用户"><span class="nav-number">4.4.</span> <span class="nav-text">编辑用户配置文件来添加用户</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启PPTPD服务"><span class="nav-number">4.5.</span> <span class="nav-text">重启PPTPD服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置网络和路由规则"><span class="nav-number">4.6.</span> <span class="nav-text">配置网络和路由规则</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#设置例行任务"><span class="nav-number">4.7.</span> <span class="nav-text">设置例行任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最后重启pptpd服务"><span class="nav-number">4.8.</span> <span class="nav-text">最后重启pptpd服务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#客户端配置"><span class="nav-number">5.</span> <span class="nav-text">客户端配置</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -645,6 +606,10 @@ sudo sysctl -p
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
 
   
 
