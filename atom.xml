@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.barackgao.com/"/>
-  <updated>2016-10-17T09:43:52.000Z</updated>
+  <updated>2016-10-18T08:54:43.000Z</updated>
   <id>http://github.barackgao.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://github.barackgao.com/2016/10/17/%E5%9C%A8AWS%E4%B8%8A%E9%85%8D%E7%BD%AEVPN/"/>
     <id>http://github.barackgao.com/2016/10/17/在AWS上配置VPN/</id>
     <published>2016-10-17T08:41:58.000Z</published>
-    <updated>2016-10-17T09:43:52.000Z</updated>
+    <updated>2016-10-18T08:54:43.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="配置和启动实例"><a href="#配置和启动实例" class="headerlink" title="配置和启动实例"></a>配置和启动实例</h2><p>1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；</p>
+    <content type="html"><![CDATA[<p>随着我们上网需求的提升，拆掉墙放眼展望世界已是必然的趋势，此时亚马逊的AWS横空出世，为我们拆墙看世界提供了极大的方便，同时这个还可以满足电脑、手机多种设备所需。下面就让我们动起手来吧！<br><a id="more"></a></p>
+<h2 id="配置和启动实例"><a href="#配置和启动实例" class="headerlink" title="配置和启动实例"></a>配置和启动实例</h2><p>1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；</p>
 <img src="/2016/10/17/在AWS上配置VPN/1.png" alt="图1" title="图1">
 <p>2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义<code>0.0.0.0/0</code>；</p>
 <img src="/2016/10/17/在AWS上配置VPN/2.png" alt="图2" title="图2">
@@ -82,10 +83,11 @@ sudo sysctl -p
     
     <summary type="html">
     
-      &lt;h2 id=&quot;配置和启动实例&quot;&gt;&lt;a href=&quot;#配置和启动实例&quot; class=&quot;headerlink&quot; title=&quot;配置和启动实例&quot;&gt;&lt;/a&gt;配置和启动实例&lt;/h2&gt;&lt;p&gt;1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；&lt;/p&gt;
-&lt;img sr
+      &lt;p&gt;随着我们上网需求的提升，拆掉墙放眼展望世界已是必然的趋势，此时亚马逊的AWS横空出世，为我们拆墙看世界提供了极大的方便，同时这个还可以满足电脑、手机多种设备所需。下面就让我们动起手来吧！&lt;br&gt;
     
     </summary>
+    
+      <category term="技术" scheme="http://github.barackgao.com/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="Internet" scheme="http://github.barackgao.com/tags/Internet/"/>

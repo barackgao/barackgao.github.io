@@ -86,37 +86,22 @@
 
 
 
-<meta name="description" content="配置和启动实例1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；
-
-2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义0.0.0.0/0；
-
-3、然后启动实例，这样就完成了实例的创建和启动。万事开头难，有了实例我们就可以开始做点文章了。
-创建和关联弹性IP1、在左边栏中选择弹性IP，">
+<meta name="description" content="随着我们上网需求的提升，拆掉墙放眼展望世界已是必然的趋势，此时亚马逊的AWS横空出世，为我们拆墙看世界提供了极大的方便，同时这个还可以满足电脑、手机多种设备所需。下面就让我们动起手来吧！">
 <meta property="og:type" content="article">
 <meta property="og:title" content="在AWS上配置VPN">
 <meta property="og:url" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/index.html">
 <meta property="og:site_name" content="BarackGao's Blog">
-<meta property="og:description" content="配置和启动实例1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；
-
-2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义0.0.0.0/0；
-
-3、然后启动实例，这样就完成了实例的创建和启动。万事开头难，有了实例我们就可以开始做点文章了。
-创建和关联弹性IP1、在左边栏中选择弹性IP，">
+<meta property="og:description" content="随着我们上网需求的提升，拆掉墙放眼展望世界已是必然的趋势，此时亚马逊的AWS横空出世，为我们拆墙看世界提供了极大的方便，同时这个还可以满足电脑、手机多种设备所需。下面就让我们动起手来吧！">
 <meta property="og:image" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/1.png">
 <meta property="og:image" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/2.png">
 <meta property="og:image" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/3.png">
 <meta property="og:image" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/4.png">
 <meta property="og:image" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/5.png">
 <meta property="og:image" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/6.png">
-<meta property="og:updated_time" content="2016-10-17T09:43:52.000Z">
+<meta property="og:updated_time" content="2016-10-18T08:54:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="在AWS上配置VPN">
-<meta name="twitter:description" content="配置和启动实例1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；
-
-2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义0.0.0.0/0；
-
-3、然后启动实例，这样就完成了实例的创建和启动。万事开头难，有了实例我们就可以开始做点文章了。
-创建和关联弹性IP1、在左边栏中选择弹性IP，">
+<meta name="twitter:description" content="随着我们上网需求的提升，拆掉墙放眼展望世界已是必然的趋势，此时亚马逊的AWS横空出世，为我们拆墙看世界提供了极大的方便，同时这个还可以满足电脑、手机多种设备所需。下面就让我们动起手来吧！">
 <meta name="twitter:image" content="http://github.barackgao.com/2016/10/17/在AWS上配置VPN/1.png">
 
 
@@ -302,6 +287,25 @@
           </span>
 
           
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
 
           
             
@@ -340,7 +344,8 @@
       
 
       
-        <h2 id="配置和启动实例"><a href="#配置和启动实例" class="headerlink" title="配置和启动实例"></a>配置和启动实例</h2><p>1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；</p>
+        <p>随着我们上网需求的提升，拆掉墙放眼展望世界已是必然的趋势，此时亚马逊的AWS横空出世，为我们拆墙看世界提供了极大的方便，同时这个还可以满足电脑、手机多种设备所需。下面就让我们动起手来吧！<br><a id="more"></a></p>
+<h2 id="配置和启动实例"><a href="#配置和启动实例" class="headerlink" title="配置和启动实例"></a>配置和启动实例</h2><p>1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；</p>
 <img src="/2016/10/17/在AWS上配置VPN/1.png" alt="图1" title="图1">
 <p>2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义<code>0.0.0.0/0</code>；</p>
 <img src="/2016/10/17/在AWS上配置VPN/2.png" alt="图2" title="图2">
@@ -510,6 +515,13 @@ sudo sysctl -p
             </a>
           </div>
 
+          
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
           
 
           
