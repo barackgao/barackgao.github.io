@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>BarackGao&#39;s Blog</title>
+  <subtitle>Observe My Life</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.barackgao.com/"/>
+  <updated>2016-10-17T09:43:52.000Z</updated>
+  <id>http://www.barackgao.com/</id>
+  
+  <author>
+    <name>BarackGao</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>在AWS上配置VPN</title>
+    <link href="http://www.barackgao.com/2016/10/17/%E5%9C%A8AWS%E4%B8%8A%E9%85%8D%E7%BD%AEVPN/"/>
+    <id>http://www.barackgao.com/2016/10/17/在AWS上配置VPN/</id>
+    <published>2016-10-17T08:41:58.000Z</published>
+    <updated>2016-10-17T09:43:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="配置和启动实例"><a href="#配置和启动实例" class="headerlink" title="配置和启动实例"></a>配置和启动实例</h2><p>1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；</p>
+<img src="/2016/10/17/在AWS上配置VPN/1.png" alt="图1" title="图1">
+<p>2、一路下一步到配置安全组，注意这一步很重要，否则可能导致VPN无法连接。点击添加规则，自定义TCP规则，端口号选择1723，来源选择自定义<code>0.0.0.0/0</code>；</p>
+<img src="/2016/10/17/在AWS上配置VPN/2.png" alt="图2" title="图2">
+<p>3、然后启动实例，这样就完成了实例的创建和启动。万事开头难，有了实例我们就可以开始做点文章了。</p>
+<h2 id="创建和关联弹性IP"><a href="#创建和关联弹性IP" class="headerlink" title="创建和关联弹性IP"></a>创建和关联弹性IP</h2><p>1、在左边栏中选择弹性IP，然后点击上方的蓝色按钮分配新地址，这样我们又拥有一个属于我们自己的公网IP了；</p>
+<img src="/2016/10/17/在AWS上配置VPN/3.png" alt="图3" title="图3">
+<img src="/2016/10/17/在AWS上配置VPN/4.png" alt="图4" title="图4">
+<p>2、选择图中我们分配好的IP，在上方的点击操作按钮，选择关联地址，在弹出的窗口中选择我们刚刚创建好的实例，不用自己输入，直接双击鼠标选择实例就好。这样我们就完成了第二步，创建和关联好了公网IP，这样VPN客户端使用的时候就有了固定的公网IP，妈妈再也不用担心我的VPN连不上服务器了。</p>
+<img src="/2016/10/17/在AWS上配置VPN/5.png" alt="图5" title="图5">
+<h2 id="登陆实例"><a href="#登陆实例" class="headerlink" title="登陆实例"></a>登陆实例</h2><p>AWS给出了具体的登录方法，windows用户可以使用Xshell等软件登录，Mac用户使用terminal直接登录就好，或者嫌麻烦的话使用网页上的terminal也可以，具体的登录方法参见AWS官方文档，在这里就不赘言了。</p>
+<h2 id="配置pptpd（这一部分比较麻烦，请仔细看好每一步）"><a href="#配置pptpd（这一部分比较麻烦，请仔细看好每一步）" class="headerlink" title="配置pptpd（这一部分比较麻烦，请仔细看好每一步）"></a>配置pptpd（这一部分比较麻烦，请仔细看好每一步）</h2><h3 id="使用apt源服务来安装PPTPD服务"><a href="#使用apt源服务来安装PPTPD服务" class="headerlink" title="使用apt源服务来安装PPTPD服务"></a>使用apt源服务来安装PPTPD服务</h3><pre><code>sudo apt-get update
+sudo apt-get install pptpd
+</code></pre><h3 id="安装完成之后编辑pptpd-conf配置文件"><a href="#安装完成之后编辑pptpd-conf配置文件" class="headerlink" title="安装完成之后编辑pptpd.conf配置文件"></a>安装完成之后编辑<code>pptpd.conf</code>配置文件</h3><pre><code>sudo vi /etc/pptpd.conf
+</code></pre><p>确保如下选项的配置</p>
+<pre><code>option /etc/ppp/pptpd-option #指定PPP选项文件的位置
+debug #启用调试模式
+localip 192.168.0.1 #VPN服务器的虚拟ip
+remoteip 192.168.0.200-238,192.168.0.245 #分配给VPN客户端的虚拟ip
+</code></pre><h3 id="编辑PPP选项配置文件"><a href="#编辑PPP选项配置文件" class="headerlink" title="编辑PPP选项配置文件"></a>编辑PPP选项配置文件</h3><pre><code>sudo vi /etc/ppp/pptpd-options
+</code></pre><p>确保如下选项的配置</p>
+<pre><code>name pptpd #pptpd服务的名称
+refuse-pap #拒绝pap身份认证模式
+refuse-chap #拒绝chap身份认证模式
+refuse-mschap #拒绝mschap身份认证模式
+require-mschap-v2 #允许mschap-v2身份认证模式
+require-mppe-128 #允许mppe 128位加密身份认证模式
+ms-dns 8.8.8.8 #使用Google DNS
+ms-dns 8.8.4.4 #使用Google DNS
+proxyarp #arp代理
+debug #调试模式
+dump #服务启动时打印出所有配置信息
+lock #锁定TTY设备
+nobsdcomp #禁用BSD压缩模式
+logfile /var/log/pptpd.log #输出日志文件位置，这一步可以省略
+</code></pre><h3 id="编辑用户配置文件来添加用户"><a href="#编辑用户配置文件来添加用户" class="headerlink" title="编辑用户配置文件来添加用户"></a>编辑用户配置文件来添加用户</h3><pre><code>sudo vi /etc/ppp/chap-secrets
+</code></pre><p>确保如下选项的配置格式：</p>
+<pre><code>用户名   服务类型   密码   分配的ip地址
+test    *    1234    *
+</code></pre><p>第一个*代表服务可以是PPTPD也可以是L2TPD，第二个*代表随机分配ip，童鞋们可以选择自己喜欢的用户名和密码，客户端登录的时候需要匹配。</p>
+<h3 id="重启PPTPD服务"><a href="#重启PPTPD服务" class="headerlink" title="重启PPTPD服务"></a>重启PPTPD服务</h3><pre><code>sudo service pptpd restart  
+</code></pre><h3 id="配置网络和路由规则"><a href="#配置网络和路由规则" class="headerlink" title="配置网络和路由规则"></a>配置网络和路由规则</h3><p>设置ipv4转发</p>
+<pre><code>sudo sed -i &apos;s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g&apos; /etc/sysctl.conf
+sudo sysctl -p
+</code></pre><p>启用iptables的NAT configuration</p>
+<pre><code>sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+</code></pre><h3 id="设置例行任务"><a href="#设置例行任务" class="headerlink" title="设置例行任务"></a>设置例行任务</h3><p>为了保证每次EC2实例重启后NAT configuration能启动, 还要修/etc/rc.local文件, 在exit 0这行上面加上</p>
+<pre><code>iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+</code></pre><h3 id="最后重启pptpd服务"><a href="#最后重启pptpd服务" class="headerlink" title="最后重启pptpd服务"></a>最后重启pptpd服务</h3><pre><code>sudo /etc/init.d/pptpd restart
+</code></pre><p>终于配置工作大功告成了，下面就是连接客户端的问题了，大家不要着急，等我一一给各位童鞋道来。</p>
+<h2 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h2><p>因为自己使用的是iPhone，就以iPhone为例来配置客户端，啥也不说直接上图，类型选择PPTP，按理说L2TP也是可以的，其中的Server就是我们刚刚创建的弹性IP，Account是我们设置好的用户名，如果严格按照教程来的话就是test，Password是用户名对应的密码，同样如果是严格按照教程来的话就是1234</p>
+<img src="/2016/10/17/在AWS上配置VPN/6.png" alt="图6" title="图6">
+<p>万事具备，连接即可，这样童鞋们无论是抓小精灵、海淘败一败抑或是逛一逛霓虹国的小网站都可以开心愉快的浪起来了。开山第一篇文档，还希望大家多支持。</p>
+<font color="#ff0000" size="5">最后提醒一下各位童鞋， AWS免费账户每月只有 15G 免费流量, 用超了要 从信用卡扣钱的！这个问题很关键！！！</font>
+
+<p>转载请注明出处。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;配置和启动实例&quot;&gt;&lt;a href=&quot;#配置和启动实例&quot; class=&quot;headerlink&quot; title=&quot;配置和启动实例&quot;&gt;&lt;/a&gt;配置和启动实例&lt;/h2&gt;&lt;p&gt;1、创建实例，选择图示的版本，既符合免费的套餐，又是我们熟悉的ubuntu；&lt;/p&gt;
+&lt;img sr
+    
+    </summary>
+    
+    
+      <category term="Internet" scheme="http://www.barackgao.com/tags/Internet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://www.barackgao.com/2016/10/17/hello-world/"/>
+    <id>http://www.barackgao.com/2016/10/17/hello-world/</id>
+    <published>2016-10-17T08:22:22.000Z</published>
+    <updated>2016-10-17T08:22:22.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
