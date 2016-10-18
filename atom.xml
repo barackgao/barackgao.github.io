@@ -4,9 +4,9 @@
   <subtitle>Observe My Life</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.barackgao.com/"/>
+  <link href="http://github.barackgao.com/"/>
   <updated>2016-10-17T09:43:52.000Z</updated>
-  <id>http://www.barackgao.com/</id>
+  <id>http://github.barackgao.com/</id>
   
   <author>
     <name>BarackGao</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>在AWS上配置VPN</title>
-    <link href="http://www.barackgao.com/2016/10/17/%E5%9C%A8AWS%E4%B8%8A%E9%85%8D%E7%BD%AEVPN/"/>
-    <id>http://www.barackgao.com/2016/10/17/在AWS上配置VPN/</id>
+    <link href="http://github.barackgao.com/2016/10/17/%E5%9C%A8AWS%E4%B8%8A%E9%85%8D%E7%BD%AEVPN/"/>
+    <id>http://github.barackgao.com/2016/10/17/在AWS上配置VPN/</id>
     <published>2016-10-17T08:41:58.000Z</published>
     <updated>2016-10-17T09:43:52.000Z</updated>
     
@@ -88,14 +88,14 @@ sudo sysctl -p
     </summary>
     
     
-      <category term="Internet" scheme="http://www.barackgao.com/tags/Internet/"/>
+      <category term="Internet" scheme="http://github.barackgao.com/tags/Internet/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.barackgao.com/2016/10/17/hello-world/"/>
-    <id>http://www.barackgao.com/2016/10/17/hello-world/</id>
+    <link href="http://github.barackgao.com/2016/10/17/hello-world/"/>
+    <id>http://github.barackgao.com/2016/10/17/hello-world/</id>
     <published>2016-10-17T08:22:22.000Z</published>
     <updated>2016-10-17T08:22:22.000Z</updated>
     
