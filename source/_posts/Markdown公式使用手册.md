@@ -2,7 +2,7 @@
 title: Markdown公式使用手册
 tags: [Markdown,公式,mathtype]
 date: 2016-10-26 17:03:20
-categories: tech
+categories: 技术
 
 ---
 <script type="text/x-mathjax-config">
