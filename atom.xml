@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.barackgao.com/"/>
-  <updated>2016-10-19T16:39:04.000Z</updated>
+  <updated>2016-10-26T13:02:58.000Z</updated>
   <id>http://github.barackgao.com/</id>
   
   <author>
@@ -14,6 +14,204 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markdown公式使用手册</title>
+    <link href="http://github.barackgao.com/2016/10/26/Markdown%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
+    <id>http://github.barackgao.com/2016/10/26/Markdown公式使用手册/</id>
+    <published>2016-10-26T09:03:20.000Z</published>
+    <updated>2016-10-26T13:02:58.000Z</updated>
+    
+    <content type="html"><![CDATA[<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: "AMS" } }});
+</script>
+Mou本身支持了公式编辑，可是上手还需要一定的时间，让我们先来总结一下吧。
+<a id="more"></a>
+## 公式使用参考
+### 如何插入公式
+Mou的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。
+行中公式可以用如下方法表示：
+
+    $$$ 数学公式 $$$
+
+行中公式可以用如下方法表示：
+
+    $$ 数学公式 $$
+
+自动编号的公式可以用如下方法表示：
+
+    \begin{equation}
+    数学公式
+    \label{eq:当前公式名}
+    \end{equation}    
+
+自动编号后的公式可在全文任意处使用`\eqref{eq:公式名}`语句引用。
+
+* 例子：
+
+        $$$ J\_\alpha(x)=\sum\_{m=0}^\infty\frac{(-1)^m}{m!\Gamma(m+\alpha+1)}{\left({\frac{x}{2}}\right)}^{2m+\alpha}\text{，行内公式示例} $$$
+
+* 显示：$$$ J\_\alpha(x)=\sum\_{m=0}^\infty\frac{(-1)^m}{m!\Gamma(m+\alpha+1)}{\left({\frac{x}{2}}\right)}^{2m+\alpha}\text{，行内公式示例} $$$
+* 例子：
+
+        $$ J\_\alpha(x)=\sum\_{m=0}^\infty\frac{(-1)^m}{m!\Gamma(m+\alpha+1)}{\left({\frac{x}{2}}\right)}^{2m+\alpha}\text{，独立公式示例} $$
+
+* 显示：$$ J\_\alpha(x)=\sum\_{m=0}^\infty\frac{(-1)^m}{m!\Gamma(m+\alpha+1)}{\left({\frac{x}{2}}\right)}^{2m+\alpha}\text{，独立公式示例} $$
+* 例子：
+
+        在公式 \eqref{eq:sample} 中，我们看到了这个被自动编号的公式。
+        \begin{equation}
+        E=mc^2 \text{，自动编号公式示例}
+        \label{eq:Sample}
+        \end{equation}
+* 显示：在公式 \eqref{eq:Sample} 中，我们看到了这个被自动编号的公式。
+\begin{equation}
+E=mc^2 \text{，自动编号公式示例}
+\label{eq:Sample}
+\end{equation}
+注意：以上的实现需要开启mathjax的自动编号配置
+
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: "AMS" } }});
+        </script>
+
+<h3 id="如何输入上下标"><a href="#如何输入上下标" class="headerlink" title="如何输入上下标"></a>如何输入上下标</h3><p><code>^</code>表示上标，<code>_</code>表示下标。如果上下标的内容多于一个字符，需要用<code>{}</code>将这些内容括成一个整体。上下标可以嵌套，也可以同时使用。</p>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$ x^{y^z}=(1+{\rm e}^x)^{-2xy^w} $$
+</code></pre></li>
+<li><p>显示：$$ x^{y^z}=(1+{\rm e}^x)^{-2xy^w} $$<br>另外，如果要在左右两边都有上下标，可以用<code>\sideset</code>命令。</p>
+</li>
+<li><p>例子：</p>
+<pre><code>$$ \sideset{^1_2}{^3_4}\bigotimes $$
+</code></pre></li>
+<li><p>显示：$$ \sideset{^1_2}{^3_4}\bigotimes $$</p>
+<h3 id="如何输入括号和分隔符"><a href="#如何输入括号和分隔符" class="headerlink" title="如何输入括号和分隔符"></a>如何输入括号和分隔符</h3><p>()、[] 和|表示符号本身，使用<code>\{\}</code>来表示{}。当要显示大号的括号或分隔符时，要用<code>\left</code>和<code>\right</code>命令。<br>一些特殊的括号：</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>显示</th>
+<th>输入</th>
+<th>显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\langle</code></td>
+<td>$$$\langle$$$</td>
+<td><code>\rangle</code></td>
+<td>$$$\rangle$$$</td>
+</tr>
+<tr>
+<td><code>\lceil</code></td>
+<td>$$$\lceil$$$</td>
+<td><code>\rceil</code></td>
+<td>$$$\rceil$$$</td>
+</tr>
+<tr>
+<td><code>\lfloor</code></td>
+<td>$$$\lfloor$$$</td>
+<td><code>\rfloor</code></td>
+<td>$$$\rfloor$$$</td>
+</tr>
+<tr>
+<td><code>\lbrace</code></td>
+<td>$$$\lbrace$$$</td>
+<td><code>\rbrace</code></td>
+<td>$$$\rbrace$$$</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$ f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right) $$
+</code></pre></li>
+<li><p>显示：$$ f(x,y,z) = 3y^2z \left( 3+\frac{7x+5}{1+y^2} \right) $$<br>有时候要用<code>\left.</code>或<code>\right.</code>进行匹配而不显示本身。</p>
+</li>
+<li><p>例子：</p>
+<pre><code>$$ \left. \frac{{\rm d}u}{{\rm d}x} \right| _{x=0} $$
+		
+* 显示：$$ \left. \frac{{\rm d}u}{{\rm d}x} \right| _{x=0} $$
+### 如何输入分数
+通常使用`\frac {分子} {分母}`命令产生一个分数，分数可嵌套。  
+便捷情况可直接输入`\frac ab`来快速生成一个$$$\frac ab$$$。  
+如果分式很复杂，亦可使用`分子 \over 分母`命令，此时分数仅有一层。  
+* 例子：
+
+		$$\frac{a-1}{b-1} \quad and \quad {a+1\over b+1}$$
+
+* 显示：$$\frac{a-1}{b-1} \quad and \quad {a+1\over b+1}$$
+### 如何输入开方
+使用`\sqrt [根指数，省略时为2] {被开方数}` 命令输入开方。  
+* 例子：
+
+		$$\sqrt{2} \quad and \quad \sqrt[n]{3}$$
+
+显示：$$\sqrt{2} \quad and \quad \sqrt[n]{3}$$
+### 如何输入省略号
+数学公式中常见的省略号有两种，`\ldots`表示与文本底线对齐的省略号，`\cdots`表示与文本中线对齐的省略号。
+
+* 例子：
+
+		$$f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2$$
+* 显示：$$f(x_1,x_2,\underbrace{\ldots}\_{\rm ldots},x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}\_{\rm cdots} + x_n^2$$* 
+### 如何输入矢量
+使用`\vec{矢量}`来自动产生一个矢量。也可以使用`\overrightarrow`等命令自定义字母上方的符号。
+* 例子：
+		
+		$$\vec{a} \cdot \vec{b}=0$$
+* 显示：$$\vec{a} \cdot \vec{b}=0$$
+* 例子：
+
+		$$\overleftarrow{xy} \quad and \quad \overleftrightarrow{xy} \quad and \quad \overrightarrow{xy}$$
+
+* 显示：$$\overleftarrow{xy} \quad and \quad \overleftrightarrow{xy} \quad and \quad \overrightarrow{xy}$$
+### 如何输入积分
+使用`\int_积分下限^积分上限 {被积表达式}`来输入一个积分。
+* 例子：
+
+		$$\int_0^1 {x^2} \,{\rm d}x$$
+
+* 显示：$$\int_0^1 {x^2} \,{\rm d}x$$
+本例中`\,`和`{\rm d}`部分可省略，但建议加入，能使式子更美观。
+### 如何输入极限运算
+使用`\lim_{变量 \to 表达式} 表达式`来输入一个极限。如有需求，可以更改`\to`符号至任意符号。
+* 例子：
+
+		$$ \lim_{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad \lim_{x \to\leftarrow{示例}} \frac{1}{n(n+1)} $$
+</code></pre></li>
+<li>显示：$$ \lim<em>{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad \lim\</em>{x\leftarrow{示例}} \frac{1}{n(n+1)} $$<h3 id="如何输入累加、累乘运算"><a href="#如何输入累加、累乘运算" class="headerlink" title="如何输入累加、累乘运算"></a>如何输入累加、累乘运算</h3>使用<code>\sum_{下标表达式}^{上标表达式} {累加表达式}</code>来输入一个累加。<br>与之类似，使用<code>\prod</code> <code>\bigcup</code> <code>\bigcap</code> 来分别输入累乘、并集和交集。<br>此类符号在行内显示时上下标表达式将会移至右上角和右下角。</li>
+<li><p>例子：</p>
+<pre><code>$$\sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad and \quad \bigcup_{i=1}^{2} R_i$$
+</code></pre></li>
+<li><p>显示：$$\sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad and \quad \bigcup_{i=1}^{2} R_i$$</p>
+</li>
+</ul>
+<p>转载请注明出处。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+    MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: &quot;AMS&quot; } }});
+&lt;/script&gt;
+Mou本身支持了公式编辑，可是上手还需要一定的时间，让我们先来总结一下吧。
+    
+    </summary>
+    
+      <category term="tech" scheme="http://github.barackgao.com/categories/tech/"/>
+    
+    
+      <category term="Markdown" scheme="http://github.barackgao.com/tags/Markdown/"/>
+    
+      <category term="公式" scheme="http://github.barackgao.com/tags/%E5%85%AC%E5%BC%8F/"/>
+    
+      <category term="mathtype" scheme="http://github.barackgao.com/tags/mathtype/"/>
+    
+  </entry>
   
   <entry>
     <title>在AWS上配置Linux+Apache+mysql+php</title>
