@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.barackgao.com/"/>
-  <updated>2016-10-26T13:05:06.000Z</updated>
+  <updated>2016-10-26T13:09:40.000Z</updated>
   <id>http://github.barackgao.com/</id>
   
   <author>
@@ -20,9 +20,11 @@
     <link href="http://github.barackgao.com/2016/10/26/Markdown%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
     <id>http://github.barackgao.com/2016/10/26/Markdown公式使用手册/</id>
     <published>2016-10-26T09:03:20.000Z</published>
-    <updated>2016-10-26T13:05:06.000Z</updated>
+    <updated>2016-10-26T13:09:40.000Z</updated>
     
-    <content type="html"><![CDATA[<script type="text/x-mathjax-config">
+    <content type="html"><![CDATA[<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+<script type="text/x-mathjax-config">
     MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: "AMS" } }});
 </script>
 Mou本身支持了公式编辑，可是上手还需要一定的时间，让我们先来总结一下吧。
@@ -195,7 +197,10 @@ E=mc^2 \text{，自动编号公式示例}
     
     <summary type="html">
     
-      &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+      &lt;script type=&quot;text/javascript&quot; async
+  src=&quot;https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML&quot;&gt;
+&lt;/script&gt;
+&lt;script type=&quot;text/x-mathjax-config&quot;&gt;
     MathJax.Hub.Config({TeX: {equationNumbers: { autoNumber: &quot;AMS&quot; } }});
 &lt;/script&gt;
 Mou本身支持了公式编辑，可是上手还需要一定的时间，让我们先来总结一下吧。
