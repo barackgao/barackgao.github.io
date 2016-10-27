@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.barackgao.com/"/>
-  <updated>2016-10-27T13:36:41.000Z</updated>
+  <updated>2016-10-27T14:27:12.000Z</updated>
   <id>http://github.barackgao.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://github.barackgao.com/2016/10/26/Markdown%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
     <id>http://github.barackgao.com/2016/10/26/Markdown公式使用手册/</id>
     <published>2016-10-26T09:03:20.000Z</published>
-    <updated>2016-10-27T13:36:41.000Z</updated>
+    <updated>2016-10-27T14:27:12.000Z</updated>
     
     <content type="html"><![CDATA[<!--
 <script type="text/x-mathjax-config">
@@ -185,6 +185,143 @@ E=mc^2 \text{，自动编号公式示例}
 <li><p>显示：$$\sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad and \quad \bigcup_{i=1}^{2} R_i$$</p>
 </li>
 </ul>
+<h3 id="如何输入希腊字母"><a href="#如何输入希腊字母" class="headerlink" title="如何输入希腊字母"></a>如何输入希腊字母</h3><p>输入<code>\小写希腊字母英文全称</code>和<code>\首字母大写希腊字母英文全称</code>来分别输入小写和大写希腊字母。<br>对于大写希腊字母与现有字母相同的，直接输入大写字母即可。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">输入</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">输入</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">输入</th>
+<th style="text-align:center">显示</th>
+<th style="text-align:center">输入</th>
+<th style="text-align:center">显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>\alpha</code></td>
+<td style="text-align:center">$$$\alpha$$$</td>
+<td style="text-align:center"><code>A</code></td>
+<td style="text-align:center">$$$A$$$</td>
+<td style="text-align:center"><code>\beta</code></td>
+<td style="text-align:center">$$$\beta$$$</td>
+<td style="text-align:center"><code>B</code></td>
+<td style="text-align:center">$$$B$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\gamma</code></td>
+<td style="text-align:center">$$$\gamma$$$</td>
+<td style="text-align:center"><code>\Gamma</code></td>
+<td style="text-align:center">$$$\Gamma$$$</td>
+<td style="text-align:center"><code>\delta</code></td>
+<td style="text-align:center">$$$\delta$$$</td>
+<td style="text-align:center"><code>\Delta</code></td>
+<td style="text-align:center">$$$\Delta$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\epsilon</code></td>
+<td style="text-align:center">$$$\epsilon$$$</td>
+<td style="text-align:center"><code>E</code></td>
+<td style="text-align:center">$$$E$$$</td>
+<td style="text-align:center"><code>\zeta</code></td>
+<td style="text-align:center">$$$\zeta$$$</td>
+<td style="text-align:center"><code>Z</code></td>
+<td style="text-align:center">$$$Z$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\eta</code></td>
+<td style="text-align:center">$$$\eta$$$</td>
+<td style="text-align:center"><code>H</code></td>
+<td style="text-align:center">$$$H$$$</td>
+<td style="text-align:center"><code>\theta</code></td>
+<td style="text-align:center">$$$\theta$$$</td>
+<td style="text-align:center"><code>\Theta</code></td>
+<td style="text-align:center">$$$\Theta$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\iota</code></td>
+<td style="text-align:center">$$$\iota$$$</td>
+<td style="text-align:center"><code>I</code></td>
+<td style="text-align:center">$$$I$$$</td>
+<td style="text-align:center"><code>\kappa</code></td>
+<td style="text-align:center">$$$\kappa$$$</td>
+<td style="text-align:center"><code>K</code></td>
+<td style="text-align:center">$$$K$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\lambda</code></td>
+<td style="text-align:center">$$$\lambda$$$</td>
+<td style="text-align:center"><code>\Lambda</code></td>
+<td style="text-align:center">$$$\Lambda$$$</td>
+<td style="text-align:center"><code>\mu</code></td>
+<td style="text-align:center">$$$\mu$$$</td>
+<td style="text-align:center"><code>M</code></td>
+<td style="text-align:center">$$$M$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\nu</code></td>
+<td style="text-align:center">$$$\nu$$$</td>
+<td style="text-align:center"><code>N</code></td>
+<td style="text-align:center">$$$N$$$</td>
+<td style="text-align:center"><code>\xi</code></td>
+<td style="text-align:center">$$$\xi$$$</td>
+<td style="text-align:center"><code>\Xi</code></td>
+<td style="text-align:center">$$$\Xi$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>o</code></td>
+<td style="text-align:center">$$$o$$$</td>
+<td style="text-align:center"><code>O</code></td>
+<td style="text-align:center">$$$O$$$</td>
+<td style="text-align:center"><code>\pi</code></td>
+<td style="text-align:center">$$$\pi$$$</td>
+<td style="text-align:center"><code>\Pi</code></td>
+<td style="text-align:center">$$$\Pi$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\rho</code></td>
+<td style="text-align:center">$$$\rho$$$</td>
+<td style="text-align:center"><code>P</code></td>
+<td style="text-align:center">$$$P$$$</td>
+<td style="text-align:center"><code>\sigma</code></td>
+<td style="text-align:center">$$$\sigma$$$</td>
+<td style="text-align:center"><code>\Sigma</code></td>
+<td style="text-align:center">$$$\Sigma$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\tau</code></td>
+<td style="text-align:center">$$$\tau$$$</td>
+<td style="text-align:center"><code>T</code></td>
+<td style="text-align:center">$$$T$$$</td>
+<td style="text-align:center"><code>\upsilon</code></td>
+<td style="text-align:center">$$$\upsilon$$$</td>
+<td style="text-align:center"><code>\Upsilon</code></td>
+<td style="text-align:center">$$$\Upsilon$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\phi</code></td>
+<td style="text-align:center">$$$\phi$$$</td>
+<td style="text-align:center"><code>\Phi</code></td>
+<td style="text-align:center">$$$\Phi$$$</td>
+<td style="text-align:center"><code>\chi</code></td>
+<td style="text-align:center">$$$\chi$$$</td>
+<td style="text-align:center"><code>X</code></td>
+<td style="text-align:center">$$$X$$$</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>\psi</code></td>
+<td style="text-align:center">$$$\psi$$$</td>
+<td style="text-align:center"><code>\Psi</code></td>
+<td style="text-align:center">$$$\Psi$$$</td>
+<td style="text-align:center"><code>\omega</code></td>
+<td style="text-align:center">$$$\omega$$$</td>
+<td style="text-align:center"><code>\Omega</code></td>
+<td style="text-align:center">$$$\Omega$$$</td>
+</tr>
+</tbody>
+</table>
 <p>转载请注明出处。</p>
 ]]></content>
     
