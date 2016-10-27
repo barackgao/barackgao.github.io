@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://github.barackgao.com/2016/10/26/Markdown公式使用手册/index.html">
 <meta property="og:site_name" content="BarackGao's Blog">
 <meta property="og:description" content="Mou本身支持了公式编辑，可是上手还需要一定的时间，让我们先来总结一下吧。">
-<meta property="og:updated_time" content="2016-10-27T02:38:11.000Z">
+<meta property="og:updated_time" content="2016-10-27T02:40:30.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown公式使用手册">
 <meta name="twitter:description" content="Mou本身支持了公式编辑，可是上手还需要一定的时间，让我们先来总结一下吧。">
@@ -517,15 +517,15 @@ E=mc^2 \text{，自动编号公式示例}
 <h3 id="如何输入积分"><a href="#如何输入积分" class="headerlink" title="如何输入积分"></a>如何输入积分</h3><p>使用<code>\int_积分下限^积分上限 {被积表达式}</code>来输入一个积分。</p>
 <ul>
 <li><p>例子：</p>
-<pre><code>$$\int_0^1 {x^2} \,{\rm d}x$$
+<pre><code>$$\int_0^1 {x^2} \,\mathrm {d}x$$
 </code></pre></li>
-<li><p>显示：$$\int_0^1 {x^2} \,{\rm d}x$$<br>本例中<code>\,</code>和<code>{\rm d}</code>部分可省略，但建议加入，能使式子更美观。</p>
+<li><p>显示：$$\int_0^1 {x^2} \,\mathrm {d}x$$<br>本例中<code>\,</code>和<code>{\rm d}</code>部分可省略，但建议加入，能使式子更美观。</p>
 </li>
 </ul>
 <h3 id="如何输入极限运算"><a href="#如何输入极限运算" class="headerlink" title="如何输入极限运算"></a>如何输入极限运算</h3><p>使用<code>\lim_{变量 \to 表达式} 表达式</code>来输入一个极限。如有需求，可以更改<code>\to</code>符号至任意符号。</p>
 <ul>
 <li><p>例子：</p>
-<pre><code>$$ \lim_{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad \lim_{x \to\leftarrow{示例}} \frac{1}{n(n+1)} $$
+<pre><code>$$ \lim_{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad \lim\_{x \to\leftarrow{示例}} \frac{1}{n(n+1)} $$
 </code></pre></li>
 <li>显示：$$ \lim<em>{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad \lim\</em>{x\leftarrow{示例}} \frac{1}{n(n+1)} $$</li>
 </ul>
