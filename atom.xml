@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.barackgao.com/"/>
-  <updated>2016-10-27T02:36:37.000Z</updated>
+  <updated>2016-10-27T02:38:11.000Z</updated>
   <id>http://github.barackgao.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://github.barackgao.com/2016/10/26/Markdown%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
     <id>http://github.barackgao.com/2016/10/26/Markdown公式使用手册/</id>
     <published>2016-10-26T09:03:20.000Z</published>
-    <updated>2016-10-27T02:36:37.000Z</updated>
+    <updated>2016-10-27T02:38:11.000Z</updated>
     
     <content type="html"><![CDATA[<!--
 <script type="text/x-mathjax-config">
@@ -127,6 +127,62 @@ E=mc^2 \text{，自动编号公式示例}
 <li><p>显示：$$ \left. \frac {\mathrm{d} u}{\mathrm{d} x} \right| _{x=0} $$</p>
 </li>
 </ul>
+<h3 id="如何输入分数"><a href="#如何输入分数" class="headerlink" title="如何输入分数"></a>如何输入分数</h3><p>通常使用<code>\frac {分子} {分母}</code>命令产生一个分数，分数可嵌套。<br>便捷情况可直接输入<code>\frac ab</code>来快速生成一个$$$\frac ab$$$。<br>如果分式很复杂，亦可使用<code>分子 \over 分母</code>命令，此时分数仅有一层。</p>
+<ul>
+<li>例子：<br>$$ \frac{a-1}{b-1} \quad and \quad {a+1\over b+1} $$</li>
+<li>显示：$$ \frac{a-1}{b-1} \quad and \quad {a+1\over b+1} $$</li>
+</ul>
+<h3 id="如何输入开方"><a href="#如何输入开方" class="headerlink" title="如何输入开方"></a>如何输入开方</h3><p>使用<code>\sqrt [根指数，省略时为2] {被开方数}</code> 命令输入开方。</p>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$\sqrt{2} \quad and \quad \sqrt[n]{3}$$
+</code></pre></li>
+<li><p>显示：$$\sqrt{2} \quad and \quad \sqrt[n]{3}$$</p>
+</li>
+</ul>
+<h3 id="如何输入省略号"><a href="#如何输入省略号" class="headerlink" title="如何输入省略号"></a>如何输入省略号</h3><p>数学公式中常见的省略号有两种，<code>\ldots</code>表示与文本底线对齐的省略号，<code>\cdots</code>表示与文本中线对齐的省略号。</p>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$f(x_1,x_2,\underbrace{\ldots}_{\rm ldots} ,x_n) = x_1^2 + x_2^2 + \underbrace{\cdots}_{\rm cdots} + x_n^2$$
+</code></pre></li>
+<li>显示：$$f(x_1,x<em>2,\underbrace{\ldots}\</em>{\rm ldots},x_n) = x_1^2 + x<em>2^2 + \underbrace{\cdots}\</em>{\rm cdots} + x_n^2$$* </li>
+</ul>
+<h3 id="如何输入矢量"><a href="#如何输入矢量" class="headerlink" title="如何输入矢量"></a>如何输入矢量</h3><p>使用<code>\vec{矢量}</code>来自动产生一个矢量。也可以使用<code>\overrightarrow</code>等命令自定义字母上方的符号。</p>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$\vec{a} \cdot \vec{b}=0$$
+</code></pre></li>
+<li>显示：$$\vec{a} \cdot \vec{b}=0$$</li>
+<li><p>例子：</p>
+<pre><code>$$\overleftarrow{xy} \quad and \quad \overleftrightarrow{xy} \quad and \quad \overrightarrow{xy}$$
+</code></pre></li>
+<li><p>显示：$$\overleftarrow{xy} \quad and \quad \overleftrightarrow{xy} \quad and \quad \overrightarrow{xy}$$</p>
+</li>
+</ul>
+<h3 id="如何输入积分"><a href="#如何输入积分" class="headerlink" title="如何输入积分"></a>如何输入积分</h3><p>使用<code>\int_积分下限^积分上限 {被积表达式}</code>来输入一个积分。</p>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$\int_0^1 {x^2} \,{\rm d}x$$
+</code></pre></li>
+<li><p>显示：$$\int_0^1 {x^2} \,{\rm d}x$$<br>本例中<code>\,</code>和<code>{\rm d}</code>部分可省略，但建议加入，能使式子更美观。</p>
+</li>
+</ul>
+<h3 id="如何输入极限运算"><a href="#如何输入极限运算" class="headerlink" title="如何输入极限运算"></a>如何输入极限运算</h3><p>使用<code>\lim_{变量 \to 表达式} 表达式</code>来输入一个极限。如有需求，可以更改<code>\to</code>符号至任意符号。</p>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$ \lim_{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad \lim_{x \to\leftarrow{示例}} \frac{1}{n(n+1)} $$
+</code></pre></li>
+<li>显示：$$ \lim<em>{n \to +\infty} \frac{1}{n(n+1)} \quad and \quad \lim\</em>{x\leftarrow{示例}} \frac{1}{n(n+1)} $$</li>
+</ul>
+<h3 id="如何输入累加、累乘运算"><a href="#如何输入累加、累乘运算" class="headerlink" title="如何输入累加、累乘运算"></a>如何输入累加、累乘运算</h3><p>使用<code>\sum_{下标表达式}^{上标表达式} {累加表达式}</code>来输入一个累加。<br>与之类似，使用<code>\prod</code> <code>\bigcup</code> <code>\bigcap</code> 来分别输入累乘、并集和交集。<br>此类符号在行内显示时上下标表达式将会移至右上角和右下角。</p>
+<ul>
+<li><p>例子：</p>
+<pre><code>$$\sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad and \quad \bigcup_{i=1}^{        2} R_i$$
+</code></pre></li>
+<li><p>显示：$$\sum_{i=1}^n \frac{1}{i^2} \quad and \quad \prod_{i=1}^n \frac{1}{i^2} \quad and \quad \bigcup_{i=1}^{2}_i$ R$</p>
+</li>
+</ul>
+<p>转载请注明出处。</p>
 ]]></content>
     
     <summary type="html">
