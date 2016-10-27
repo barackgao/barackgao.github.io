@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.barackgao.com/"/>
-  <updated>2016-10-27T01:25:21.000Z</updated>
+  <updated>2016-10-27T01:26:17.000Z</updated>
   <id>http://github.barackgao.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://github.barackgao.com/2016/10/26/Markdown%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
     <id>http://github.barackgao.com/2016/10/26/Markdown公式使用手册/</id>
     <published>2016-10-26T09:03:20.000Z</published>
-    <updated>2016-10-27T01:25:21.000Z</updated>
+    <updated>2016-10-27T01:26:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>Mou本身支持了公式编辑，可是上手还需要一定的时间，让我们先来总结一下吧。<br><a id="more"></a></p>
 <h2 id="公式使用参考"><a href="#公式使用参考" class="headerlink" title="公式使用参考"></a>公式使用参考</h2><h3 id="如何插入公式"><a href="#如何插入公式" class="headerlink" title="如何插入公式"></a>如何插入公式</h3><p>Mou的数学公式有两种：行中公式和独立公式。行中公式放在文中与其它文字混编，独立公式单独成行。<br>行中公式可以用如下方法表示：</p>
@@ -124,9 +124,8 @@ E=mc^2 \text{，自动编号公式示例}
 如果分式很复杂，亦可使用`分子 \over 分母`命令，此时分数仅有一层。
 
 * 例子：
-		
-		$$ \frac{a-1}{b-1} \quad and \quad {a+1\over b+1} $$
 
+$$ \frac{a-1}{b-1} \quad and \quad {a+1\over b+1} $$
 
 * 显示：$$ \frac{a-1}{b-1} \quad and \quad {a+1\over b+1} $$
 
