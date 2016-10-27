@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://github.barackgao.com/"/>
-  <updated>2016-10-27T02:06:26.000Z</updated>
+  <updated>2016-10-27T02:07:29.000Z</updated>
   <id>http://github.barackgao.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://github.barackgao.com/2016/10/26/Markdown%E5%85%AC%E5%BC%8F%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/"/>
     <id>http://github.barackgao.com/2016/10/26/Markdown公式使用手册/</id>
     <published>2016-10-26T09:03:20.000Z</published>
-    <updated>2016-10-27T02:06:26.000Z</updated>
+    <updated>2016-10-27T02:07:29.000Z</updated>
     
     <content type="html"><![CDATA[<!--
 <script type="text/x-mathjax-config">
@@ -75,6 +75,43 @@ E=mc^2 \text{，自动编号公式示例}
 <li><p>显示：$$ \sideset{^1_2}{^3_4}\bigotimes $$</p>
 </li>
 </ul>
+<h3 id="如何输入括号和分隔符"><a href="#如何输入括号和分隔符" class="headerlink" title="如何输入括号和分隔符"></a>如何输入括号和分隔符</h3><p>()、[] 和|表示符号本身，使用<code>\{\}</code>来表示{}。当要显示大号的括号或分隔符时，要用<code>\left</code>和<code>\right</code>命令。<br>一些特殊的括号：</p>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>显示</th>
+<th>输入</th>
+<th>显示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\langle</code></td>
+<td>$$$\langle$$$</td>
+<td><code>\rangle</code></td>
+<td>$$$\rangle$$$</td>
+</tr>
+<tr>
+<td><code>\lceil</code></td>
+<td>$$$\lceil$$$</td>
+<td><code>\rceil</code></td>
+<td>$$$\rceil$$$</td>
+</tr>
+<tr>
+<td><code>\lfloor</code></td>
+<td>$$$\lfloor$$$</td>
+<td><code>\rfloor</code></td>
+<td>$$$\rfloor$$$</td>
+</tr>
+<tr>
+<td><code>\lbrace</code></td>
+<td>$$$\lbrace$$$</td>
+<td><code>\rbrace</code></td>
+<td>$$$\rbrace$$$</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
     
     <summary type="html">
