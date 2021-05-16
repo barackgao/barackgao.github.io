@@ -46,5 +46,5 @@ Github Pages作为世界最大的同性交友平台为Github用户提供了一�
 
 本期的教程到这里就结束了，欢迎大家交流、打赏！
 
-![名片和打赏](https://raw.githubusercontent.com/barackgao/barackgao.github.io/master/assets/img/bottom_qr_code.png)
+![名片和打赏](/assets/img/bottom_qr_code.png)
 
